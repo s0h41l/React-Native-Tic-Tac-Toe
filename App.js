@@ -10,6 +10,8 @@ import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
 import Header from './src/components/Header';
 import Board from './src/components/Board';
+import Store from './src/Store';
+import {Provider} from 'react-redux';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -25,7 +27,9 @@ export default class App extends Component<Props> {
       <View>
         <Header headerText={"TicTacToe"}/>
         <View style={{justifyContent:'center',alignItems:'center',marginTop:20}}>
+          <Provider store={Store}>
           <Board/>
+          </Provider>
         </View>
         
       </View>
