@@ -84,7 +84,7 @@ class Board extends Component{
     
                 <View style={{flexDirection:'row'}}>
     
-                    <TouchableOpacity style={{borderRightColor:'black',borderBottomColor:'black',borderTopColor:'black',borderTopWidth:1,borderBottomWidth:1,borderRightWidth:1,width:100,height:100,justifyContent:'center',alignItems:'center'}} onPress={()=>this.placePeg(3)}>
+                    <TouchableOpacity style={{borderRightColor:'black',borderBottomColor:'blue',borderTopColor:'black',borderTopWidth:1,borderBottomWidth:1,borderRightWidth:1,width:100,height:100,justifyContent:'center',alignItems:'center'}} onPress={()=>this.placePeg(3)}>
                     <Text style={{fontSize:80,marginTop:-11,color:(this.props.State.board[3]=="X")?"red":'green'}}>{this.props.State.board[3]}</Text>
                     </TouchableOpacity>
                     
